@@ -1,6 +1,7 @@
 #include <assert.h>
 #include <math.h>
 #include <setjmp.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,7 +18,7 @@ char *CuStrAlloc(int size) {
 }
 
 char *CuStrCopy(const char *old) {
-    int len = strlen(old);
+    int len = (int) strlen(old);
     char *newStr = CuStrAlloc(len + 1);
     strcpy(newStr, old);
     return newStr;
@@ -50,7 +51,12 @@ void CuStringDelete(CuString *str) {
 }
 
 void CuStringResize(CuString *str, int newSize) {
-    str->buffer = (char *) realloc(str->buffer, sizeof(char) * newSize);
+    char *old = (char *) realloc(str->buffer, sizeof(char) * newSize);
+    if (!old) {
+        printf("CuStringResize: realloc failed");
+        exit(EXIT_FAILURE);
+    }
+    str->buffer = old;
     str->size = newSize;
 }
 
@@ -61,7 +67,7 @@ void CuStringAppend(CuString *str, const char *text) {
         text = "NULL";
     }
 
-    length = strlen(text);
+    length = (int) strlen(text);
     if (str->length + length + 1 >= str->size)
         CuStringResize(str, str->length + length + 1 + STRING_INC);
     str->length += length;
@@ -85,7 +91,7 @@ void CuStringAppendFormat(CuString *str, const char *format, ...) {
 }
 
 void CuStringInsert(CuString *str, const char *text, int pos) {
-    int length = strlen(text);
+    int length = (int) strlen(text);
     if (pos > str->length)
         pos = str->length;
     if (str->length + length + 1 >= str->size)

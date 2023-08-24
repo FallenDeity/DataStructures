@@ -11,3 +11,6 @@ for dir in DIRS:
             command = CLANG_COMMAND.format(file=file)
             print(command)
             os.system(command)
+            
+print("Formatting main.c")
+os.system("clang-format -i main.c")

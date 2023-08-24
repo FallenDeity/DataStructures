@@ -1,6 +1,6 @@
 #include "tests/CuTest/CuTest.h"
-#include "tests/stacks/StacksTest/stackTest.h"
 #include "tests/stacks/MultipleStacksTest/multipleStackTest.h"
+#include "tests/stacks/StacksTest/stackTest.h"
 
 #include <stdio.h>
 
