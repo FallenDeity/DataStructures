@@ -1,0 +1,6 @@
+#ifndef DATASTRUCTURES_UTILS_H
+#define DATASTRUCTURES_UTILS_H
+
+int getInteger();
+
+#endif//DATASTRUCTURES_UTILS_H
