@@ -1,7 +1,10 @@
 #include "multipleStackTest.h"
 #include "../../../src/stacks/headers/multiple_stack.h"
 
+#include <stdio.h>
+
 static void TestInitializeMultipleStack(CuTest *tc) {
+    printf("\n---Multiple Stack Test Suite---\n");
     MultipleStack multipleStack = initializeMultipleStack(5, 3);
     CuAssertIntEquals(tc, 3, multipleStack.stack_size);
     CuAssertIntEquals(tc, 5, multipleStack.total_stacks);
@@ -51,6 +54,7 @@ static void TestDisplay(CuTest *tc) {
     multipleStack.push(&multipleStack, 0, 2);
     multipleStack.display(multipleStack, 0);
     CuAssertIntEquals(tc, 1, multipleStack.top[0]);
+    printf("---Multiple Stack Test Suite Complete---\n");
 }
 
 CuSuite *MultipleStackGetSuite() {

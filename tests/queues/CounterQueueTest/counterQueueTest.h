@@ -1,0 +1,8 @@
+#ifndef DATASTRUCTURES_COUNTERQUEUETEST_H
+#define DATASTRUCTURES_COUNTERQUEUETEST_H
+
+#include "../../CuTest/CuTest.h"
+
+CuSuite *CounterQueueGetSuite();
+
+#endif//DATASTRUCTURES_COUNTERQUEUETEST_H

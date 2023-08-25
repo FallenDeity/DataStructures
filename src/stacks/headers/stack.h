@@ -1,5 +1,5 @@
 #ifndef DATASTRUCTURES_STACKS_H
-#define DATASTRUCTURES_STACK_H
+#define DATASTRUCTURES_STACKS_H
 
 typedef struct Stack {
     int *array;

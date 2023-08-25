@@ -1,8 +1,10 @@
 #include "stackTest.h"
 #include "../../../src/stacks/headers/stack.h"
 
+#include <stdio.h>
 
 static void TestInitializeStack(CuTest *tc) {
+    printf("\n---Stack Test Suite---\n");
     Stack stack = initializeStack(5);
     CuAssertIntEquals(tc, 5, stack.size);
     CuAssertIntEquals(tc, -1, stack.top);
@@ -52,6 +54,7 @@ static void TestDisplay(CuTest *tc) {
     stack.push(&stack, 2);
     stack.display(stack);
     CuAssertIntEquals(tc, 2, stack.pop(&stack));
+    printf("---Stack Test Suite Complete---\n");
 }
 
 CuSuite *StackGetSuite() {

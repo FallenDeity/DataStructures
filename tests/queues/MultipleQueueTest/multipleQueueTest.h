@@ -1,0 +1,8 @@
+#ifndef DATASTRUCTURES_MULTIPLEQUEUETEST_H
+#define DATASTRUCTURES_MULTIPLEQUEUETEST_H
+
+#include "../../CuTest/CuTest.h"
+
+CuSuite *MultipleQueueGetSuite();
+
+#endif//DATASTRUCTURES_MULTIPLEQUEUETEST_H
