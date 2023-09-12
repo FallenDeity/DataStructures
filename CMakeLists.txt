@@ -33,4 +33,8 @@ add_executable(DataStructures main.c
         tests/queues/LinearQueueTest/linearQueueTest.c
         tests/queues/LinearQueueTest/linearQueueTest.h
         tests/queues/MultipleQueueTest/multipleQueueTest.c
-        tests/queues/MultipleQueueTest/multipleQueueTest.h)
+        tests/queues/MultipleQueueTest/multipleQueueTest.h
+        src/linkedlists/sources/linked_list.c
+        src/linkedlists/headers/linked_list.h
+        tests/linkedlists/LinkedListTest/linkedListTest.c
+        tests/linkedlists/LinkedListTest/linkedListTest.h)

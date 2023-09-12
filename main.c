@@ -1,4 +1,5 @@
 #include "tests/CuTest/CuTest.h"
+#include "tests/linkedlists/LinkedListTest/linkedListTest.h"
 #include "tests/queues/CircularQueueTest/circularQueueTest.h"
 #include "tests/queues/CounterQueueTest/counterQueueTest.h"
 #include "tests/queues/LinearQueueTest/linearQueueTest.h"
@@ -18,6 +19,7 @@ void runAllTests() {
     CuSuiteAddSuite(suite, CounterQueueGetSuite());
     CuSuiteAddSuite(suite, LinearQueueGetSuite());
     CuSuiteAddSuite(suite, MultipleQueueGetSuite());
+    CuSuiteAddSuite(suite, LinkedListGetSuite());
 
     CuSuiteRun(suite);
     CuSuiteSummary(suite, output);

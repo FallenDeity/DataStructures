@@ -1,0 +1,8 @@
+#ifndef DATASTRUCTURES_LINKEDLISTTEST_H
+#define DATASTRUCTURES_LINKEDLISTTEST_H
+
+#include "../../CuTest/CuTest.h"
+
+CuSuite *LinkedListGetSuite();
+
+#endif//DATASTRUCTURES_LINKEDLISTTEST_H
